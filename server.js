@@ -1,6 +1,4 @@
 const PORT = process.env.PORT || 3001; // Make 3001 the port to the api server
-const fs = require('fs'); // For write to file
-const path = require('path');
 const apiRoute = require('./routes/apiRoute');
 const htmlRoute = require('./routes/htmlRoute');
 
