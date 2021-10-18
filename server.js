@@ -48,6 +48,7 @@ function createNewNote(body, notesArray){
 }
 
 app.post('/api/notes', (req,res) =>{
+    req.body.id = note.length.toString();
     const newNote = createNewNote(req.body, allNotes);
     res.json(newNote);
 });
@@ -69,7 +70,7 @@ function deleteNote(){
 
 app.delete('/api/notes/:id', (req, res) => {
     deleteNote(req.params.id, allNotes);
-    res.join(true);
+    res.json(true);
 });
 
 app.listen(PORT, () => {
