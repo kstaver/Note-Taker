@@ -33,7 +33,6 @@ router.post('/notes', (req, res) =>{
     res.json(newNote);
 });
 
-
 /*
 function deleteNote(){
     for(let i = 0; i < notesArray.length; i++){
