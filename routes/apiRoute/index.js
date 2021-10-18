@@ -33,16 +33,15 @@ router.post('/notes', (req, res) =>{
     res.json(notes);
 });
 
-/*
 function deleteNote(){
-    for(let i = 0; i < notesArray.length; i++){
-        let note = notesArray[i];
+    for(let i = 0; i < note.length; i++){
+        let notes = note[i];
 
-        if(note.id == id){
+        if(notes.id == id){
             notesArray.splice(i, 1);
             fs.writeFileSync(
-                path.join(_dirname, '../../db/db.json'),
-                JSON.stringify(notesArray, null, 2)
+                path.join(__dirname, '../../db/db.json'),
+                JSON.stringify(note, null, 2)
             );
             break;
         }
@@ -50,7 +49,7 @@ function deleteNote(){
 };
 
 router.get('/notes', (req,res) =>{
-    const delNote = deleteNote(req.body, allNotes);
+    const delNote = deleteNote(req.body, note);
     res.json(delNote);
 });
 
@@ -61,8 +60,8 @@ router.post('/notes', (req, res) =>{
 });
 
 router.delete('/notes/:id', (req, res) => {
-    deleteNote(req.params.id, allNotes);
+    deleteNote(req.params.id, note);
     res.json(true);
 });
-*/
+
 module.exports = router;
