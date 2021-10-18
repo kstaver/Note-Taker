@@ -3,8 +3,8 @@ const fs = require('fs');
 const path = require('path');
 const notesArray = require('../../db/db.json');
 
-function createNewNote(body, notesArray){
-    const newNote = body;
+function createNewNote(body, note){
+    const notes = body;
     /*if (!Array.isArray(notesArray)){
         notesArray = [];
     }
@@ -14,23 +14,23 @@ function createNewNote(body, notesArray){
     body.id = notesArray[0];
     notesArray[0]++;*/
 
-    notesArray.push(newNote);
+    note.push(notes);
     fs.writeFileSync(
         path.join(_dirname, '../../db/db.json'),
-        JSON.stringify(notesArray, null, 2)
+        JSON.stringify(note, null, 2)
     );
 //    return newNote;
 };
 
 router.get('/notes', (req,res) =>{
-    const newNote = createNewNote(req.body, allNotes);
-    res.json(newNote);
+    //const newNote = createNewNote(req.body, allNotes);
+    res.json(note);
 });
 
 router.post('/notes', (req, res) =>{
-    req.body.id = notesArray.length.toString();
-    const newNote = createNewNote(req.body, notesArray);
-    res.json(newNote);
+    req.body.id = note.length.toString();
+    const notes = createNewNote(req.body, note);
+    res.json(notes);
 });
 
 /*
