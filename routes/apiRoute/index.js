@@ -13,6 +13,10 @@ function createNewNote(body, note){
     );
 };
 
+// note = array
+// notes = body
+// delNote = call deleteNote function
+
 router.get('/notes', (req,res) =>{
     res.json(note);
 });
@@ -23,26 +27,26 @@ router.post('/notes', (req, res) =>{
     res.json(notes);
 });
 
-// function deleteNote(){
-// 
-//   const note = notes.filter((n) => n.id === noteId)[0];
-//   if (note) {
-//     const noteIndex = notes.indexOf(note);
-//     notes.splice(noteIndex, 1);
-//     writeFile(notes);
-//     return note;
-//   }
-// };
+function deleteNote(id, note){
+
+    const notes = note.filter((n) => n.id === id)[0];
+    if (notes) {
+        const noteIndex = note.indexOf(notes);
+        note.splice(noteIndex, 1);
+        return note;
+    }
+};
 
 
-// router.delete('/notes/:id', (req, res) => {
-//     const { id } = req.params;
-//     const note = deleteNote(id, notes);
-//     if (note) {
-//       res.json(note);
-//     } else {
-//       res.status(400).send("Didn't find any notes with that ID.");
-//     }
-// });
+router.delete('/notes/:id', (req, res) => {
+
+    const { id } = req.params;
+    const delNote = deleteNote(id, note);
+    if (delNote) {
+      res.json(delNote);
+    } else {
+      res.status(400).send("Didn't find any notes with that ID.");
+    }
+});
 
 module.exports = router;
