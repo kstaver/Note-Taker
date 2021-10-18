@@ -9,14 +9,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "jest": "^27.3.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kstaver/https://github.com/kstaver/Note-Taker.git"
   },
   "keywords": [],
-  "bugs":{
+  "bugs": {
     "url": "https://github.com/kstaver/Note-Taker/issues"
   },
   "homepage": "https://github.com/kstaver/Note-Taker"
