@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const fs = require('fs');
 const path = require('path');
-const notesArray = require('../../db/db.json');
+const note = require('../../db/db.json');
 
 function createNewNote(body, note){
     const notes = body;
