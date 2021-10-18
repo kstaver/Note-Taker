@@ -29,6 +29,14 @@ You can create all kinds of notes and lists by using my Note Taker app. Here are
 
 Review your notes easily by reopening the app as all of your notes will be available to you whenever you need them.
 
+![front_page](https://github.com/kstaver/Note-Taker/blob/main/assets/images/front_page.JPG)
+
+![hello_note](https://github.com/kstaver/Note-Taker/blob/main/assets/images/note_hello.JPG)
+
+![nope_note_prior_to_saving](https://github.com/kstaver/Note-Taker/blob/main/assets/images/note_nope_prior_to_save.JPG)
+
+![note_hello_deleted](https://github.com/kstaver/Note-Taker/blob/main/assets/images/note_hello_deleted.JPG)
+
 ## Contribution
 Feel free to contact me about contributing to this repository.
 
