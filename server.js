@@ -28,6 +28,14 @@ app.get('*', (req,res) => {
     res.sendFile(path.join(_dirname, './public/index.html'));
 });
 
+function newNote(){
+
+}
+
+function deleteNote(){
+    
+}
+
 app.listen(3001, () => {
     console.log(`API server now on port 3001!`);
 });
