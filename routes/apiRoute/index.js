@@ -33,16 +33,6 @@ router.post('/notes', (req, res) =>{
     res.json(notes);
 });
 
-router.delete("/notes/:id", (req, res) => {
-    const { id } = req.params;
-    
-    return fs.readFile(path.join(__dirname, "../db/db.json"), "utf8", (err, notes) => {
-      if (err) throw err;
-      deleteOldNote(id, JSON.parse(notes).notes, res);
-      })  
-    
-  });
-
 // function deleteNote(){
 //   //get the note to delete
 //   const note = notes.filter((n) => n.id === noteId)[0];
