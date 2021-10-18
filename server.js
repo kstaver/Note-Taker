@@ -47,7 +47,7 @@ function createNewNote(body, notesArray){
     return newNote;
 }
 
-app.post('/api/notes',(req,res) =>{
+app.post('/api/notes', (req,res) =>{
     const newNote = createNewNote(req.body, allNotes);
     res.json(newNote);
 });
