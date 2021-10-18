@@ -5,14 +5,14 @@ const notesArray = require('../../db/db.json');
 
 function createNewNote(body, notesArray){
     const newNote = body;
-    if (!Array.isArray(notesArray)){
+    /*if (!Array.isArray(notesArray)){
         notesArray = [];
     }
     if(notesArray.length === 0){
         notesArray.push(0);
     }
     body.id = notesArray[0];
-    notesArray[0]++;
+    notesArray[0]++;*/
 
     notesArray.push(newNote);
     fs.writeFileSync(
