@@ -13,10 +13,6 @@ function createNewNote(body, note){
     );
 };
 
-// note = array
-// notes = body
-// delNote = call deleteNote function
-
 router.get('/notes', (req,res) =>{
     res.json(note);
 });
@@ -36,7 +32,6 @@ function deleteNote(id, note){
         return note;
     }
 };
-
 
 router.delete('/notes/:id', (req, res) => {
 
