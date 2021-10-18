@@ -10,7 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "jest": "^27.3.0"
+    "jest": "^27.3.0",
+    "node": "^16.11.1"
   },
   "repository": {
     "type": "git",
